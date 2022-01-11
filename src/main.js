@@ -2,5 +2,16 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import BaseCard from "@/components/ui/BaseCard";
+import BaseButton from "@/components/ui/BaseButton";
+import BaseBadge from "@/components/ui/BaseBadge";
+import BaseSpinner from "@/components/ui/BaseSpinner";
+import BaseDialog from "@/components/ui/BaseDialog";
 
-createApp(App).use(store).use(router).mount('#app')
+const app = createApp(App);
+app.component('BaseCard', BaseCard);
+app.component('BaseButton', BaseButton);
+app.component('BaseBadge', BaseBadge);
+app.component('BaseSpinner', BaseSpinner);
+app.component('BaseDialog', BaseDialog);
+app.use(store).use(router).mount('#app')
